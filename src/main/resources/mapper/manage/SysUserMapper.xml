@@ -89,7 +89,7 @@
       and ${tableUploadUtil.searchdeAttribute} LIKE CONCAT(CONCAT('%', #{tableUploadUtil.searchdetail,jdbcType=VARCHAR}),'%')
     </if>
     ORDER BY id DESC
-       #{tableUploadUtil.start},#{tableUploadUtil.length}
+    limit  #{tableUploadUtil.start},#{tableUploadUtil.length}
   </select>
   <select id="listAllAdmin" resultMap="BaseResultMap">
     select

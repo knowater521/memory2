@@ -20,7 +20,7 @@ public class FrontPermissionsAuthenticationFilter extends PermissionsAuthorizati
     @Override
     public boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue)throws IOException {
         mappedValue = buildPermissionsFromRequest(request);
-        boolean flag = super.isAccessAllowed(request, response,mappedValue );
+        boolean flag = super.isAccessAllowed(request, response,mappedValue);
         return flag;
     }
     protected String[] buildPermissionsFromRequest(ServletRequest request) {
